@@ -24,6 +24,20 @@ For solving these types of puzzles or performing any entry level smart contract 
 
 Yes, you read that right. Test net contract deployment and function execution on test nets is free. Make as many mistakes as you want. Free use of the test net implies using it within reason. Test nets have been abused in that past and that just ruins it for everyone. That's why most test nets have public faucets that let participants 'drip' a limited number of test ether over a specified time frame. This ether is used in the exact same way you'd use it over the main net.
 
+## Problem
+
+Source: https://capturetheether.com/challenges/warmup/deploy/
+```
+pragma solidity ^0.4.21;
+
+contract DeployChallenge {
+    // This tells the CaptureTheFlag contract that the challenge is complete.
+    function isComplete() public pure returns (bool) {
+        return true;
+    }
+}
+```
+
 ## Solution
 
 We will need to install a client to get some test ether in order to complete this challenge. The challenge asks us to use the [MetaMask remote client](https://metamask.io/). MetaMask is a browser plugin that injects the web3.js javascript library into each page you visit. This library and its functions act as a bridge between your browser and the blockchain. MetaMask can connect to a bunch of different Ethereum networks, including the Ropsten test net needed for this challenge.
