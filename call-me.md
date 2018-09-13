@@ -11,6 +11,9 @@ The web based [Remix Integrated Development Environment (IDE)](https://github.co
 ## Challenge
 
 Source:https://capturetheether.com/challenges/warmup/call-me/
+>To complete this challenge, all you need to do is call a function.
+>
+>The “Begin Challenge” button will deploy the following contract:
 ```
 pragma solidity ^0.4.21;
 
@@ -22,6 +25,7 @@ contract CallMeChallenge {
     }
 }
 ```
+>Call the function named callme and then click the “Check Solution” button.
 
 ## Solution
 
