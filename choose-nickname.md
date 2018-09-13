@@ -1,5 +1,7 @@
 # Choose a nickname
 
+## Required Concepts
+
 While the title to this challenge is pretty self-explanatory, the solution isn't as straight forward as it may seem. For this puzzle you have to pass an argument in the ```setNickname``` function call. But passing a ```string``` to register a nickname won't work, because the function's argument value type is ```bytes32```. In Solidity, ```bytes32``` is a fixed size array of 32 bytes in length; hex encoded. The reason a string can't be passed as an argument for this challenge is because in Solidity a ```string```, much like ```bytes```(note there is no number beside bytes), are actually not a value type, but are both dynamic arrays.
 
 All variables, arguments, and return values in Solidity must declare a value type. You can read more about the various value types in Solidity here: https://solidity.readthedocs.io/en/v0.4.24/types.html
@@ -23,6 +25,40 @@ Therefore:
 
 * ```0xF``` in base 16 = ```15``` in base 10 = ```1111``` in base 2
 * ```0xA``` in base 16 = ```10``` in base 10 = ```1010``` in base 2
+
+## Challenge
+Source: https://capturetheether.com/challenges/warmup/nickname/
+```
+pragma solidity ^0.4.21;
+
+// Relevant part of the CaptureTheEther contract.
+contract CaptureTheEther {
+    mapping (address => bytes32) public nicknameOf;
+
+    function setNickname(bytes32 nickname) public {
+        nicknameOf[msg.sender] = nickname;
+    }
+}
+
+// Challenge contract. You don't need to do anything with this; it just verifies
+// that you set a nickname for yourself.
+contract NicknameChallenge {
+    CaptureTheEther cte = CaptureTheEther(msg.sender);
+    address player;
+
+    // Your address gets passed in as a constructor parameter.
+    function NicknameChallenge(address _player) public {
+        player = _player;
+    }
+
+    // Check that the first character is not null.
+    function isComplete() public view returns (bool) {
+        return cte.nicknameOf(player)[0] != 0;
+    }
+}
+```
+
+## Solution
 
 To solve this puzzle, we'll use the web3.js library to convert our nickname string into a bytes32 padded fixed size array. Use node package manager to install the module into your desired directory by typing ```node npm web3``` into terminal.
 
