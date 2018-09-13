@@ -27,6 +27,14 @@ Yes, you read that right. Test net contract deployment and function execution on
 ## Challenge
 
 Source: https://capturetheether.com/challenges/warmup/deploy/
+>To complete this challenge, you need to:
+>
+>Install MetaMask.
+>Switch to the Ropsten test network.
+>Get some Ropsten ether. Clicking the “buy” button in MetaMask will take you to a faucet that gives out free test ether.
+>After you’ve done that, press the red button on the left to deploy the challenge contract.
+>
+>You don’t need to do anything with the contract once it’s deployed. Just click the “Check Solution” button to verify that you deployed successfully.
 ```
 pragma solidity ^0.4.21;
 
