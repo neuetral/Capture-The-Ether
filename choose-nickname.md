@@ -28,6 +28,11 @@ Therefore:
 
 ## Challenge
 Source: https://capturetheether.com/challenges/warmup/nickname/
+>It’s time to set your Capture the Ether nickname! This nickname is how you’ll show up on the leaderboard.
+>
+>The CaptureTheEther smart contract keeps track of a nickname for every player. To complete this challenge, set your nickname to a non-empty string. The smart contract is running on the Ropsten test network at the address 0x71c46Ed333C35e4E6c62D32dc7C8F00D125b4fee.
+>
+>Here’s the code for this challenge:
 ```
 pragma solidity ^0.4.21;
 
