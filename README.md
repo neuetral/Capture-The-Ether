@@ -10,7 +10,7 @@ Capture the Ether has several sections, and each section has a theme. The challe
 ## Warmup
 The warmup challenges are intended to get you familiar with the way Capture the Ether works and the tools you need to use.
 * [Deploy a contract](https://github.com/neuetral/Capture-The-Ether/blob/master/deploy-contract.asciidoc)
-* [Call me](https://github.com/neuetral/Capture-The-Ether/blob/master/deploy-contract.asciidoc)
+* [Call me](https://github.com/neuetral/Capture-The-Ether/blob/master/call-me.asciidoc)
 * [Choose a nickname]()
 
 ## Lotteries
