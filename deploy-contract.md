@@ -24,7 +24,7 @@ For solving these types of puzzles or performing any entry level smart contract 
 
 Yes, you read that right. Test net contract deployment and function execution on test nets is free. Make as many mistakes as you want. Free use of the test net implies using it within reason. Test nets have been abused in that past and that just ruins it for everyone. That's why most test nets have public faucets that let participants 'drip' a limited number of test ether over a specified time frame. This ether is used in the exact same way you'd use it over the main net.
 
-## Problem
+## Challenge
 
 Source: https://capturetheether.com/challenges/warmup/deploy/
 ```
