@@ -20,8 +20,8 @@ Feeling lucky? These challenges will show how hard it is to run a fair lottery.
 * [Guess the secret number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-secret.md)
 * [Guess the random number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-random.md)
 * [Guess the new number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-new.md)
-* [Predict the future]()
-* [Predict the block hash]()
+* [Predict the future](https://github.com/neuetral/Capture-The-Ether/blob/master/predict-future.md)
+* [Predict the block hash](https://github.com/neuetral/Capture-The-Ether/blob/master/predict-blockhash.md)
 
 ## Math
 These challenges use a variety of techniques, but they all involve a bit of math.
