@@ -4,11 +4,9 @@
 
 An unsigned integer ```uint``` value type in Solidity only includes zero and positive integers up to a predefined max value. ```uint``` is a short hand notation of ```uint256```. The suffix can be any 8 bit increment between ```uint8``` and ```uint256```. To determine the largest integer given a particular suffix:
 
-```
-uint256 = 2**256 - 1
+```uint256 = 2**256 - 1```
 
-uint8 = 2**8 - 1
-```
+```uint8 = 2**8 - 1```
 
 This implies that the correct answer to this puzzle is a number between ```0``` and ```255```; inclusive.
 
