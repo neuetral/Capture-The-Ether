@@ -18,7 +18,7 @@ Feeling lucky? These challenges will show how hard it is to run a fair lottery.
 
 * [Guess the number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-number.md)
 * [Guess the secret number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-secret.md)
-* [Guess the random number]()
+* [Guess the random number](https://github.com/neuetral/Capture-The-Ether/blob/master/guess-random.md)
 * [Guess the new number]()
 * [Predict the future]()
 * [Predict the block hash]()
