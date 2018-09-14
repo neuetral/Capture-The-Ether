@@ -18,6 +18,8 @@ Ethereum's ```keccak256``` hash function is a one way hash function. This means 
 
 ## Challenge
 
+Source:https://capturetheether.com/challenges/lotteries/guess-the-secret-number/
+
 >Putting the answer in the code makes things a little too easy.
 >
 >This time I’ve only stored the hash of the number. Good luck reversing a cryptographic hash!
