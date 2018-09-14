@@ -9,4 +9,4 @@
 # These files are text and should be normalized (Convert crlf => lf)
 *.gitattributes text
 .gitignore text
-*.md linguist-language=Solidity
+*.md linguist-language=Solidity, Javascript
