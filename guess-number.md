@@ -2,6 +2,8 @@
 
 ## Challenge
 
+Source: https://capturetheether.com/challenges/lotteries/guess-the-number/
+
 >I’m thinking of a number. All you have to do is guess it.
 
 ```
