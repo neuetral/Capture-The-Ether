@@ -47,7 +47,7 @@ contract PredictTheBlockHashChallenge {
 
 ## Solution
 
-The exploit to this contract is, again, in its failure to use a proper source of entropy to sufficiently randomize the answer. The assumption is that the ```blockhash``` of every block within the Ethereum network is retrievable using Solidity. According to the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) and the [Solidity docs](https://solidity.readthedocs.io/en/v0.4.24/units-and-global-variables.html#block-and-transaction-properties), this blockhash function information is only available for the last 256 most recent complete blocks. Any blocks older than this will return a value of zero in Solidity, or in our case a ```bytes32``` value of:
+The exploit to this contract is, again, in its failure to use a proper source of entropy to sufficiently randomize the answer. The assumption is that the ```blockhash``` of every block within the Ethereum network is retrievable using Solidity. According to the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) and the [Solidity docs](https://solidity.readthedocs.io/en/v0.4.24/units-and-global-variables.html#block-and-transaction-properties), this blockhash function information is only available for the last 256 most recently completed blocks. Any blocks older than this will return a value of zero in Solidity, or in our case a ```bytes32``` value of:
 ```
 0x0000000000000000000000000000000000000000000000000000000000000000
 ```
