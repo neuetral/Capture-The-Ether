@@ -26,7 +26,7 @@ Feeling lucky? These challenges will show how hard it is to run a fair lottery.
 ## Math
 These challenges use a variety of techniques, but they all involve a bit of math.
 
-* [Token sale]()
+* [Token sale](https://github.com/neuetral/Capture-The-Ether/blob/master/token-sale.md)
 * [Token whale]()
 * [Retirement fund]()
 * [Mapping]()
