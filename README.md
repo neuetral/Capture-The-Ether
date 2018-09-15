@@ -29,7 +29,7 @@ These challenges use a variety of techniques, but they all involve a bit of math
 * [Token sale](https://github.com/neuetral/Capture-The-Ether/blob/master/token-sale.md)
 * [Token whale](https://github.com/neuetral/Capture-The-Ether/blob/master/token-whale.md)
 * [Retirement fund](https://github.com/neuetral/Capture-The-Ether/blob/master/retirement-fund.md)
-* [Mapping]()
+* [Mapping](https://github.com/neuetral/Capture-The-Ether/blob/master/mapping.md)
 * [Donation]()
 * [Fifty years]()
 
