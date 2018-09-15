@@ -113,7 +113,7 @@ msg.value: ```1 wei``` - this keeps the array at two values, so we don't overwri
 upsert (2,0)
 ```
 ### Third tx:
-We index from 1 so that we empty both slots. The original, and the index==1 that we created.
+We index from 1 so that we empty both slots. The original, and the ```index==1``` that we created.
 ```
 withdraw(1)
 ```
