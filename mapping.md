@@ -1,5 +1,7 @@
 # Mapping
 
+## Required Concepts
+
 According to the [Solidity docs](https://solidity.readthedocs.io/en/v0.4.20/miscellaneous.html#layout-of-state-variables-in-storage), static variables are stored in the order they are declared, starting at ```0```. The storage system in Ethereum is most easily understood as a very large array. Memory locations in Ethereum are called slots. Each Ethereum smart contract has ```2**256``` slots. Each slot maps to a 32 byte value. All slots are initially set to ```bytes32(0)```.
 
 Dynamically sized arrays are stored a little differently to account for the uncertain amount of storage that might be needed throughout the life of the smart contract. For this reason, dynamic arrays (with the exception of ```byte``` arrays and ```strings```; see the docs) only occupy one slot when they are declared. The difference is that this slot is only occupied by the current ```length``` of the dynamically sized array. The actual storage location for the contents of this value type is then determined by the ```keccak256``` hash of the dynamic array's slot position. Each element within the array is stored sequentially starting with that hash value. As an example, if the dynamic array was the third variable to be declared then each item would be stored sequentially from the ```keccak256``` hash of ```bytes32(2)```.
@@ -24,12 +26,39 @@ They only take up 3 slots because the two uint128 variables are packed into one 
 
 This implies that the order of variable declaration in Solidity matters.
 
-From what we already know about an Ethereum smart contract's storage, we can deduce that the max length of a dynamic array would be the max allowable value of the smart contract's own storage array. The max slot of the storage area is 2**256 - 1 so the max size of a dynamic array would be 2**256 - 1. If this were the case, the dynamic array would then have the ability to point and re-write over any variable in contract storage given that the location of the target variable is known.
+From what we already know about an Ethereum smart contract's storage, we can deduce that the max length of a dynamic array would be the max allowable value of the smart contract's own storage array. The max slot of the storage area is ```2**256 - 1``` so the max size of a dynamic array would be ```2**256 - 1```. If this were the case, the dynamic array would then have the ability to point and re-write over any variable in contract storage given that the location of the target variable is known.
 
-The exploiting the dynamic array is the key to this puzzle. The function 'set' gives the participant the ability to expand the array to any size and set the value at that position. For more info on this exploit, check out: https://github.com/Arachnid/uscc/tree/master/submissions-2017/doughoyte
+## Challenge
+Source: https://capturetheether.com/challenges/math/mapping/
+>Who needs mappings? I’ve created a contract that can store key/value pairs using just an array.
+```
+pragma solidity ^0.4.21;
 
-To solve this puzzle, we must find the location of our target key-value pair: 'isComplete'. The value of an unset variable is '0' (false). We need to set it to '1' (true). Using Javascript:
+contract MappingChallenge {
+    bool public isComplete;
+    uint256[] map;
 
+    function set(uint256 key, uint256 value) public {
+        // Expand dynamic array as needed
+        if (map.length <= key) {
+            map.length = key + 1;
+        }
+
+        map[key] = value;
+    }
+
+    function get(uint256 key) public view returns (uint256) {
+        return map[key];
+    }
+}
+```
+
+## Solution
+
+Exploiting the dynamic array is the key to this puzzle. The ```set``` function gives the participant the ability to expand the array to any size and set the value at that position. For more info on this exploit, check out: https://github.com/Arachnid/uscc/tree/master/submissions-2017/doughoyte
+
+To solve this puzzle, we must find the location of our target key-value pair: ```isComplete```. The value of an unset variable is ```0``` (```false```). We need to set it to ```1``` (```true```). Using Javascript:
+```
 const webThree = require('web3');
 const bn = require('bn.js');
 
@@ -79,10 +108,10 @@ let key = result.sub(hashSlot);
 // convert to hex:
 key = web3.utils.toHex(key);
 // return: 0x4ef1d2ad89edf8c4d91132028e8195cdf30bb4b5053d4f8cd260341d4805f30a
+```
 
-
-Alternatively, we can use this solidity contract to do the same thing
-
+Alternatively, we can use this solidity contract to do the same thing:
+```
 pragma solidity ^0.4.24;
 
 contract cove {
@@ -95,17 +124,20 @@ contract cove {
         return bytes32((_two ** 256) - uint256(keccak256(slot)) + (index * elementSize) + _targetMemoryLocation);
     }
 }
-/*
-which also returns
+```
+This also returns (base 16):
+```
 "0x4ef1d2ad89edf8c4d91132028e8195cdf30bb4b5053d4f8cd260341d4805f30a"
-or
+```
+or (base 10):
+```
 "35707666377435648211887908874984608119992236509074197713628505308453184860938"
-*/
+```
 
-To solve this puzzle call the 'set' function, to re-assign the 'isComplete' value to true:
+To solve this puzzle call the ```set``` function, to re-assign the ```isComplete``` value to ```true```.
 
-set(key,value)
-
-where,
+* set(key,value), where...
+```
 key = "0x4ef1d2ad89edf8c4d91132028e8195cdf30bb4b5053d4f8cd260341d4805f30a"
 value = 1
+```
