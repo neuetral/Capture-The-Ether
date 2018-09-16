@@ -23,7 +23,8 @@ contract PublicKeyChallenge {
 ```
 ## Solution
 
-Using javascript:
+
+Using javascript, the web.js + ethereumjs-tx libraries, and an infura.io API key we can inspect the ropsten test net:
 
 ```
 const webThree = require('web3');
