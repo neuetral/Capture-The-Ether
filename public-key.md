@@ -68,8 +68,12 @@ web3.eth.getTransaction(ownerTx).then(
     publicKey = publicKey.toString('hex');
 
     // spit out the public key to solve the challenge
-    console.log('publicKey: ' + publicKey);
+    console.log('publicKey: 0x' + publicKey);
 
   }
 );
+```
+Referencing the code above, we can pass the ```publicKey``` output as the ```bytes``` argument for the ```PublicKeyChallenge```'s ```authenticate``` function:
+```
+"0x613a8d23bd34f7e568ef4eb1f68058e77620e40079e88f705dfb258d7a06a1a0364dbe56cab53faf26137bec044efd0b07eec8703ba4a31c588d9d94c35c8db4"
 ```
