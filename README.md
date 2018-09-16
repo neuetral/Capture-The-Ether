@@ -38,7 +38,7 @@ These challenges test your understanding of Ethereum accounts.
 
 * [Fuzzy identity](https://github.com/neuetral/Capture-The-Ether/blob/master/fuzzy-identity.md)
 * [Public Key](https://github.com/neuetral/Capture-The-Ether/blob/master/public-key.md)
-* [Account Takeover]()
+* [Account Takeover](https://github.com/neuetral/Capture-The-Ether/blob/master/account-takeover.md)
 
 ## Miscellaneous
 These challenges defy categorization.
