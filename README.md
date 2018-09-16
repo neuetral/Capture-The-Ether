@@ -44,4 +44,4 @@ These challenges test your understanding of Ethereum accounts.
 These challenges defy categorization.
 
 * [Assume ownership](https://github.com/neuetral/Capture-The-Ether/blob/master/assume-ownership.md)
-* [Token bank]()
+* [Token bank](https://github.com/neuetral/Capture-The-Ether/blob/master/token-bank.md)
