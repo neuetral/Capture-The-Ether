@@ -36,7 +36,7 @@ These challenges use a variety of techniques, but they all involve a bit of math
 ## Accounts
 These challenges test your understanding of Ethereum accounts.
 
-* [Fuzzy identity]()
+* [Fuzzy identity](https://github.com/neuetral/Capture-The-Ether/blob/master/fuzzy-identity.md)
 * [Public Key]()
 * [Account Takeover]()
 
