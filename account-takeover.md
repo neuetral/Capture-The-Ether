@@ -32,7 +32,6 @@ Using the weak bitcoin signatures case study as an example, we can go all the wa
 ```
 const webThree = require('web3');
 const ethTx = require('ethereumjs-tx');
-const readline = require('readline');
 
 // replace this value with the address of each transaction
 let tx = '0xd79fc80e7b787802602f3317b7fe67765c14a7d40c3e0dcb266e63657f881396';
