@@ -43,5 +43,5 @@ These challenges test your understanding of Ethereum accounts.
 ## Miscellaneous
 These challenges defy categorization.
 
-* [Assume ownership]()
+* [Assume ownership](https://github.com/neuetral/Capture-The-Ether/blob/master/assume-ownership.md)
 * [Token bank]()
